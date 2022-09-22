@@ -1,23 +1,31 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import api from "../config/api"
+export const useRequestData = (endpoint, initialState) => {
+    const [data, setData] = useState(initialState);
+  const [isLoading, setIsLoading] = useState(false);
 
-export const useRequestData = (url) => {
-    let [data, setData] = useState(undefined)
-    let [isLoading, setIsLoading] = useState(undefined)
-    let [errorMsg, setErrorMsg] = useState(undefined)
+  useEffect(() => {
+    getData();
+       // eslint-disable-next-line
+  }, [endpoint]);
 
-    useEffect(() => {
-        setIsLoading(true)
-        axios.get(url).then(response => {
-            setIsLoading(false)
-            setData(response)
-        }).catch(error => {
-            setIsLoading(false)
-            setErrorMsg(error.message)
-        })
-    }, [url])
+  const getData = () => {
+    setIsLoading(true);
+    api
+      .get(`${endpoint}`)
+      .then((res) => {
+        setData(res.data);
+      })
+      .catch((err) => {
+        console.log(err.response.data.message);
+        alert(err.response.data.message);
+      })
+      .finally(() => {
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 2000);
+      });
+  };
 
-    return [data,isLoading,errorMsg]
-}
-
-export default useRequestData
+  return { data, isLoading };
+};
