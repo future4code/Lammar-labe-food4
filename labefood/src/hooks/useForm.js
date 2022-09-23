@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 
 export const useForm = (initialState) => {
@@ -14,3 +15,4 @@ export const useForm = (initialState) => {
 
   return { form, onChange, cleanFields, setForm };
 };
+
