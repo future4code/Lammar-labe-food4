@@ -20,7 +20,7 @@ import { Login } from "../../constants/constants"
 export const LoginPage = () => {
     const navigate = useNavigate()
 
-    const [form, onChangeInputs] = useForm({
+    const [form, onChange] = useForm({
         email: "",
         password: ""
     })
@@ -60,7 +60,7 @@ export const LoginPage = () => {
                             name='email'
                             // type='email'
                             value={form.email}
-                            onChange={onChangeInputs}
+                            onChange={onChange}
                             placeholder="email@email.com"
                         />
                         {!isEmailValid ? (
@@ -76,7 +76,7 @@ export const LoginPage = () => {
                             <Input
                                 name="password"
                                 value={form.password}
-                                onChange={onChangeInputs}
+                                onChange={onChange}
                                 pr='4.5rem'
                                 type={showPassword ? 'text' : 'password'}
                                 placeholder='Mínimo 6 caracteres'
