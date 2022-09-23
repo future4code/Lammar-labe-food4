@@ -4,6 +4,7 @@ import {useForm} from '../../hooks/useForm'
 // import {Header} from '../../components/header/Header'
 import { useNavigate } from "react-router-dom"
 import { BASE_URL } from "../../constants/constants"
+import {goToLoginPage} from "../../routes/coordinator"
 import {goToAddressRegistration} from "../../routes/coordinator"
 import axios from "axios"
 export const Signup = () =>{
