@@ -1,10 +1,15 @@
 import React from "react"
-
-
+import { goToLoginPage } from "../../routes/coordinator"
+import { useNavigate } from "react-router-dom"
+import { Container } from "./styled"
 export const HomePage = () =>{
+    const navigate = useNavigate()
     return (
-        <div>
-           <h1> HomePage</h1>
-            </div>
+        <Container>
+            <h1>Rappi4</h1>
+      {setTimeout(() => {
+        goToLoginPage(navigate)
+      }, 2000)}
+            </Container>
     )
 }

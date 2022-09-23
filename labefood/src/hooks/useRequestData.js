@@ -6,7 +6,7 @@ export const useRequestData = (endpoint, initialState) => {
 
   useEffect(() => {
     getData();
-       // eslint-disable-next-line
+
   }, [endpoint]);
 
   const getData = () => {
