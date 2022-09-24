@@ -14,7 +14,7 @@ export function useGetRest(url) {
         setData(response.data.restaurants);
       })
       .catch((err) => {
-        console.log(err);
+        
       });
   }, [url]);
 

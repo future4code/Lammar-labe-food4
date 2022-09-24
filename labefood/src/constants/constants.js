@@ -7,10 +7,12 @@ export const Login = async (body) =>{
     return data;
 }
 
-export const loginPage = (body, clear, navigate) => {
+export const loginPage = (body, clear, navigate, setIsLoading) => {
+    setIsLoading(true);
     axios
       .post(`${BASE_URL}/login`, body)
       .then((res) => {
+        setIsLoading(false);
         localStorage.setItem('token', res.data.token)
         goToSearch(navigate)
         clear()

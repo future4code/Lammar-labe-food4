@@ -9,6 +9,14 @@ export const SearchWrapper = styled.div`
   background-color: #ffff;
 `;
 
+export const SearchInputDiv = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #ffff;
+`;
+
 export const SearchHeader = styled.div`
   display: flex;
   align-items: center;
@@ -22,6 +30,7 @@ export const SearchHeader = styled.div`
   img {
     width: 24px;
     height: 24px;
+    cursor: pointer;
   }
   p {
     font-size: 16px;
@@ -46,57 +55,25 @@ export const SearchInputText = styled.p`
   color: #000;
 `;
 
-export const SearchCard = styled.div`
+export const Categorias = styled.ul`
+  width: auto;
+  max-width: 100vw;
+  overflow: overlay;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  width: 100%;
-  height: 100vh;
-  background-color: #ffff;
-`;
-
-export const CardContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 328px;
-  height: 188px;
-  border: 1px solid #b8b8b8;
+  height: 20px;
+  padding: 20px 0;
   box-sizing: border-box;
-  border-radius: 8px;
-  margin: 8px 0;
-
-  div {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    padding: 0 16px;
+  cursor: pointer;
+  ::-webkit-scrollbar {
+    display: none;
   }
-`;
-
-export const CardImage = styled.img`
-  width: 328px;
-  height: 120px;
-  border-radius: 8px 8px 0 0;
-`;
-
-export const CardTitle = styled.p`
-  font-size: 16px;
-  color: red;
-  margin: 8px 0;
-  margin-right: 168px;
-`;
-
-export const CardText = styled.p`
-  font-size: 12px;
-  line-height: 14px;
-  color: #b8b8b8;
-  margin: 0 0 8px 10px;
-`;
-
-export const CardPrice = styled.p`
-  font-size: 12px;
-  line-height: 14px;
-  color: #000;
-  margin: 0 10px 8px 0px;
-`;
+  li{
+    list-style-type: none;
+    margin: 0 5px;
+    font-size: 16px;
+    :active{
+        color: #e86e5a;
+    }
+  }
+`
