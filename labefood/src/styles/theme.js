@@ -1,6 +1,6 @@
 import { extendTheme } from "@chakra-ui/react"
 
-export const Theme = extendTheme({
+export const theme = extendTheme({
     components: {
         Button: {
             variants: {
