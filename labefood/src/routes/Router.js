@@ -4,7 +4,7 @@ import {AddressRegistration} from "../pages/addressregistration/AddressRegistrat
 import {Feed} from "../pages/feed/Feed"
 import {LoginPage} from "../pages/loginpage/LoginPage"
 import {Restaurants} from "../pages/restaurants/Restaurants"
-import { Search } from "../pages/search/Search";
+import { Search } from "../pages/search";
 import {Signup} from "../pages/signup/Signup"
 import { HomePage } from "../pages/homepage/HomePage";
 
@@ -17,7 +17,7 @@ export function Router() {
                 <Route path="/Feed" element={<Feed/>}/>
                 <Route path="/LoginPage" element={<LoginPage/>}/>
                 <Route path="/Restaurants" element={<Restaurants/>}/>
-                <Route path="/Search" element={<Search/>}/>
+                <Route path="/buscar" element={<Search/>}/>
                 <Route path="/Signup" element={<Signup/>}/>
             </Routes>
         </BrowserRouter>
