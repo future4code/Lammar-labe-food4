@@ -9,7 +9,7 @@ import {goToAddressRegistration} from "../../routes/coordinator"
 import axios from "axios"
 export const Signup = () =>{
   
-    const { form, onChange, cleanFields} =useForm({
+    const [ form, onChange, cleanFields] =useForm({
       name: "",
       email: "",
       cpf: "",
