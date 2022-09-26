@@ -4,7 +4,7 @@ import {AddressRegistration} from "../pages/addressregistration/AddressRegistrat
 import {Feed} from "../pages/feed/Feed"
 import {LoginPage} from "../pages/loginpage/LoginPage"
 import {Restaurants} from "../pages/restaurants/Restaurants"
-import { Search } from "../pages/search/Search";
+import { Search } from "../pages/Search";
 import {Signup} from "../pages/signup/Signup"
 import { HomePage } from "../pages/homepage/HomePage";
 
