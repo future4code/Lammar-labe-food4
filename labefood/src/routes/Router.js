@@ -4,11 +4,7 @@ import {AddressRegistration} from "../pages/addressregistration/AddressRegistrat
 import {Feed} from "../pages/feed/Feed"
 import {LoginPage} from "../pages/loginpage/LoginPage"
 import {Restaurants} from "../pages/restaurants/Restaurants"
-<<<<<<< HEAD
 import { Search } from "../pages/Search";
-=======
-import { Search } from "../pages/search";
->>>>>>> 56276ce0f661e2e61e5f104900f49f3db9866c65
 import {Signup} from "../pages/signup/Signup"
 import { HomePage } from "../pages/homepage/HomePage";
 
