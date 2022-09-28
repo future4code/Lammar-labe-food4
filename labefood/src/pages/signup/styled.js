@@ -2,14 +2,13 @@ import styled from "styled-components";
 
 
 export const LoginPageContainer = styled.div`
-  width: 100%;
+ width: 100%;
   height: 100vh;
-  margin-top: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-size: 1.5em;
-  text-align: center;
+  text-align: left;
   
   h1:nth-child(1) {
     color: #E86E5A;
@@ -17,12 +16,14 @@ export const LoginPageContainer = styled.div`
     align-items: center;
   }
   p{
-    margin-top: 3vh;
+    margin-top: 2vh;
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
 `;
 
 export const FormContainer = styled.div`
- display: flex;
+  display: flex;
   flex-direction: column;
   width: 80vw;
   max-width: 450px;
@@ -55,8 +56,22 @@ export const Button = styled.div`
 `
 
 export const ButtonContainer = styled.div`
+  display: flex;
   width: 20.5rem;
   height: 2.625rem;
   padding: 0.75rem 1rem;
-  border-radius: 2px;
-  background-color: #E86E5A;`
+  border-radius: 5px;
+  background-color: #E86E5A;
+  `
+
+export const ImgIfuture = styled.img`
+display: flex;
+margin: 10px 150px 10px;
+
+`
+
+export const HeaderBack = styled.div`
+ width: 100%;
+  border-bottom: 1px solid #B8B8B8;
+  margin: -5vh 0 -1vh 0;
+`

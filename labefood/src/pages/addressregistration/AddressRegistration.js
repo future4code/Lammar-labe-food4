@@ -1,14 +1,16 @@
 import React from "react"
-import {LoginPageContainer, FormContainer, Input, Button, ButtonContainer} from './styled'
+import {LoginPageContainer, FormContainer, Input, Button, ButtonContainer, HeaderBack, ImgIfuture} from './styled'
 import {useForm} from '../../hooks/useForm'
 // import {Header} from '../../components/header/Header'
+import rappi4 from "../../assets/rappi4.png";
+import Return from "../../assets/back.svg"
 import { useNavigate } from "react-router-dom"
 import { BASE_URL } from "../../constants/constants"
-import {goToFeed} from "../../routes/coordinator"
+import {goToFeed, goToSignup} from "../../routes/coordinator"
 import axios from "axios"
 
 export const AddressRegistration = () =>{
-    const { form, onChange, cleanFields} =useForm({
+    const [ form, onChange, cleanFields] =useForm({
         street: "",
         number: "",
         neighbourhood: "",
@@ -17,10 +19,12 @@ export const AddressRegistration = () =>{
         complement: ""
       });
       const navigate = useNavigate()
-   
+      const ClickReturn = () => {
+        goToSignup(navigate)
+      }
    
     const SubmitAddAdress=() =>{
-      const url = `${BASE_URL}/rappi4/address`
+      const url = `${BASE_URL}/address`
       const body = {
         street: form.street,
         number: form.number,
@@ -55,6 +59,11 @@ export const AddressRegistration = () =>{
   
       return (
           <LoginPageContainer>
+            <ImgIfuture src={rappi4} alt="logo do ifuture" />
+            <HeaderBack>
+              
+            <img onClick={ClickReturn} src={Return} alt="back"></img>
+            </HeaderBack>
         <p>Meu endereço</p>
         <form onSubmit={submit} >
             <FormContainer>
@@ -111,7 +120,7 @@ export const AddressRegistration = () =>{
             id="outlined-required"
             label="Estado"
             required/>           
-        </FormContainer>
+        
         <ButtonContainer>
         <Button
           onClick={SubmitAddAdress}
@@ -123,6 +132,7 @@ export const AddressRegistration = () =>{
           Salvar
         </Button>
           </ButtonContainer>
+          </FormContainer>
           </form>
         </LoginPageContainer>
       )}

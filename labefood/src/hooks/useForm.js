@@ -9,11 +9,11 @@ export const useForm = (initialState) => {
     }
     const clearField = () => {
         setForm(initialState)
-        
+    };
 
   return [ form, onChange, clearField, setForm ];
 };
 
 
 
-}
+

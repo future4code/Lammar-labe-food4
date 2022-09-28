@@ -1,15 +1,15 @@
 import React from "react"
-import {LoginPageContainer, FormContainer, Input, Button, ButtonContainer} from './styled'
+import {LoginPageContainer, FormContainer, Input, Button, ButtonContainer, ImgIfuture, HeaderBack} from './styled'
 import {useForm} from '../../hooks/useForm'
-// import {Header} from '../../components/header/Header'
 import { useNavigate } from "react-router-dom"
 import { BASE_URL } from "../../constants/constants"
-import {goToLoginPage} from "../../routes/coordinator"
-import {goToAddressRegistration} from "../../routes/coordinator"
+import rappi4 from "../../assets/rappi4.png";
+import {goToAddressRegistration, goToLoginPage} from "../../routes/coordinator"
+import Return from "../../assets/back.svg"
 import axios from "axios"
 export const Signup = () =>{
   
-    const [ form, onChange, cleanFields] =useForm({
+    const [ form, onChange, clearFields] =useForm({
       name: "",
       email: "",
       cpf: "",
@@ -20,9 +20,11 @@ export const Signup = () =>{
   const ClickAlertPassword = () =>{
     alert("As senhas digitadas não conferem.")
   }
- 
+  const ClickReturn = () => {
+    goToLoginPage(navigate)
+  }
   const SubmitSignUp=() =>{
-    const url = `${BASE_URL}/rappi4/signup`
+    const url = `${BASE_URL}/signup`
     const body = {
       "name": form.name,
       "email": form.email,
@@ -48,13 +50,15 @@ export const Signup = () =>{
 
   const submit = (event) => {
     event.preventDefault();
-    cleanFields();
+    clearFields();
   }
 
     return (
         <LoginPageContainer>
-          
-       <h1>Rappi4</h1>
+           <ImgIfuture src={rappi4} alt="logo do ifuture" />
+          <HeaderBack>
+          <img onClick={ClickReturn} src={Return} alt="back"></img>
+          </HeaderBack>
       <p>Cadastrar</p>
       <form onSubmit={submit} >
           <FormContainer>
@@ -110,7 +114,7 @@ export const Signup = () =>{
             id="outlined-required"
             label="Confirmar"
             required/>            
-      </FormContainer>
+      
       <ButtonContainer>
       {form.rep_password === form.password ?
           (<Button
@@ -128,6 +132,7 @@ export const Signup = () =>{
               Criar
             </Button>) }
         </ButtonContainer>
+        </FormContainer>
         </form>
       </LoginPageContainer>
     )}
