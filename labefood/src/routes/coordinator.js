@@ -5,3 +5,4 @@ export const goToFeed = (navigate) => {navigate("/Feed")};
 export const goToRestaurants = (navigate) => {navigate("/Restaurants")};
 export const goToSearch = (navigate) => {navigate("/buscar")};
 export const goToSignup = (navigate) => {navigate("/Signup")};
+export const goToProfile = (navigate) => {navigate("/profile")}

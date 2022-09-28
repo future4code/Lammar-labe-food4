@@ -7,6 +7,7 @@ import {Restaurants} from "../pages/restaurants/Restaurants"
 import { Search } from "../pages/search";
 import {Signup} from "../pages/signup/Signup"
 import { HomePage } from "../pages/homepage/HomePage";
+import { ProfilePage } from "../pages/ProfilePage/ProfilePage";
 
 export function Router() {
     return(
@@ -16,6 +17,7 @@ export function Router() {
                 <Route path="/AddressRegistration" element={<AddressRegistration/>}/>
                 <Route path="/Feed" element={<Feed/>}/>
                 <Route path="/LoginPage" element={<LoginPage/>}/>
+                <Route path={"/profile"} element={<ProfilePage/>} /> 
                 <Route path="/Restaurants" element={<Restaurants/>}/>
                 <Route path="/Search" element={<Search/>}/>
                 <Route path="/Signup" element={<Signup/>}/>
