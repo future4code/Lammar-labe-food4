@@ -1,15 +1,17 @@
 import React, { useState } from "react";
-import logo from "../../images/back.png";
 import CardRestaurant from "../../components/CardRestaurant";
-import {
-  SearchHeader,
-  SearchWrapper,
-  SearchInput,
-  SearchInputDiv,
-  Categorias,
-} from "./styled";
 import { BASE_URL } from "../../constants/constants";
 import { useGetRest } from "../../hooks/useGetRest";
+import {
+  Flex,
+  Input,
+  Text,
+  Icon,
+  UnorderedList,
+  ListItem,
+} from "@chakra-ui/react";
+import { RiSearchLine } from "react-icons/ri";
+import { IoIosArrowBack } from "react-icons/io";
 
 export const Search = () => {
   const [restaurantes] = useGetRest(`${BASE_URL}/restaurants`);
@@ -24,38 +26,97 @@ export const Search = () => {
     i.name.toLowerCase().includes(busca.toLowerCase())
   );
 
-  // const tiposCategorias = restaurantes.map((i) => (
-  //   <li key={i.id} onClick={() => setCategoria(i.category)}>
-  //     {i.category}
-  //   </li>
-  // ));
-
   return (
-    <SearchWrapper>
-      <SearchHeader>
-        <img onClick={() => window.history.back()} src={logo} alt="back" />
-        <p>Buscar</p>
-      </SearchHeader>
-
-      <SearchInputDiv>
-        <SearchInput
-          placeholder="Buscar Restaurante"
+    <Flex align="center" flexDir="column">
+      <IoIosArrowBack
+        style={{ position: "absolute", top: "1rem", left: "1rem" }}
+        cursor="pointer"
+        onClick={() => window.history.back()}
+      />
+      <Flex
+        w="100%"
+        align="center"
+        borderBottom="1px solid #b8b8b8"
+        justify="center"
+        p="3"
+        marginBottom="10px"
+      >
+        <Text
+          w="2.688rem"
+          h="1.188rem"
+          fontFamily="Roboto"
+          fontSize="1rem"
+          letterSpacing="-0.39px"
+          textAlign="center"
+          color="#000"
+        >
+          Busca
+        </Text>
+      </Flex>
+      <Flex
+        as="label"
+        w="20.5rem"
+        h="3.5rem"
+        p="1rem 0.503rem 1rem 1.063rem"
+        border="solid 1px #b8b8b8"
+        borderRadius="2px"
+      >
+        <Icon
+          as={RiSearchLine}
+          w="1.5rem"
+          h="1.5rem"
+          margin="0 0.959rem 0 0"
+          objectFit="contain"
+          color="#b8b8b8"
+        />
+        <Input
+          variant="unstyled"
+          placeholder="Restaurante"
           value={busca}
           onChange={(e) => setBusca(e.target.value)}
         />
-
-        <Categorias>
-          {restaurantes.map((i) => (
-            <li key={i.id} 
+      </Flex>
+      <UnorderedList
+        w="100%"
+        h="3.5rem"
+        p="1rem 0.503rem 1rem 1.063rem"
+        borderRadius="2px"
+        overflow="auto"
+        display="flex"
+        alignItems="center"
+        cursor="pointer"
+        css={{
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        }}
+      >
+        {restaurantes.map((i) => (
+          <ListItem
+            listStyleType="none"
+            margin="0 5px"
+            fontSize="16px"
+            _active={{
+              color: "#e86e5a",
+            }}
+            key={i.id}
             onClick={() => setCategoria(i.category)}
             style={{
               color: categoria === i.category ? "red" : "black",
-            }}>
-              {i.category}
-            </li>
-          ))}
-          </Categorias>
-
+            }}
+          >
+            {i.category}
+          </ListItem>
+        ))}
+      </UnorderedList>
+      <Flex
+        align="center"
+        w="100%"
+        flexWrap="wrap"
+        justify="center"
+        gap="30px"
+        flexDir="row"
+      >
         {filtro.map((item) => {
           return (
             <CardRestaurant
@@ -68,9 +129,8 @@ export const Search = () => {
             />
           );
         })}
-
         {filtro.length === 0 ? <p>Não encontramos :(</p> : null}
-      </SearchInputDiv>
-    </SearchWrapper>
+      </Flex>
+    </Flex>
   );
 };
