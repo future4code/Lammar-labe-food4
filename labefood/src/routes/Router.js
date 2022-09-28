@@ -5,8 +5,9 @@ import {Feed} from "../pages/feed/Feed"
 import {LoginPage} from "../pages/loginpage/LoginPage"
 import {Restaurants} from "../pages/restaurants/Restaurants"
 import { Search } from "../pages/search/Search";
-import {Signup} from "../pages/signup/Signup"
+import {Signup} from "../pages/signup/Signup";
 import { HomePage } from "../pages/homepage/HomePage";
+import { ProductsPage } from "../pages/productsPage/ProductsPage";
 
 export function Router() {
     return(
@@ -17,6 +18,7 @@ export function Router() {
                 <Route path="/Feed" element={<Feed/>}/>
                 <Route path="/LoginPage" element={<LoginPage/>}/>
                 <Route path="/Restaurants" element={<Restaurants/>}/>
+                <Route path="/ProductsPage" element={<ProductsPage/>}/>;
                 <Route path="/Search" element={<Search/>}/>
                 <Route path="/Signup" element={<Signup/>}/>
             </Routes>
