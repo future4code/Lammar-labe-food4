@@ -60,3 +60,17 @@ export const ButtonContainer = styled.div`
   padding: 0.75rem 1rem;
   border-radius: 2px;
   background-color: #E86E5A;`
+
+
+export const HeaderBack = styled.div`
+  width: 100%;
+  border-bottom: 1px solid #B8B8B8;
+  margin: -5vh 0 -1vh 0;
+ 
+`
+
+export const ImgIfuture = styled.img`
+display: flex;
+
+
+`
