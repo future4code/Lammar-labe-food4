@@ -3,7 +3,7 @@ import { goToSearch } from "../routes/coordinator"
 export const BASE_URL = "https://us-central1-missao-newton.cloudfunctions.net/rappi4A"
 
 export const Login = async (body) =>{
-    const {data} = await axios.post(`${BASE_URL}rappi4/login`, body)
+    const {data} = await axios.post(`${BASE_URL}/login`, body)
     return data;
 }
 
