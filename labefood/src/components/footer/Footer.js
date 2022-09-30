@@ -1,6 +1,6 @@
 import { Container, Order, IMG, OrderInfo, Btns, Icons } from "./Styled"
 import { useNavigate } from "react-router-dom";
-import {useRequestData} from "../../hooks/useRequestData"
+import {useRequestedData} from "../../hooks/useRequestedData"
 import { goToFeed, goToRestaurants, goToProfile} from "../../routes/coordinator";
 import Avatar from '../../assets/Avatarsvg'
 import Shopping_Cart from '../../assets/Shopping_Cartsvg'
@@ -11,7 +11,7 @@ export const Footer = ({current}) => {
 
     const navigate = useNavigate()
   
-    const { data } = useRequestData(BASE_URL + "/active-order", [])
+    const { data } = useRequestedData(BASE_URL + "/active-order", [])
     
     return (
         <Container>
