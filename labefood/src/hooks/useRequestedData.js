@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../config/api"
-export const useRequestData = (endpoint, initialState) => {
+export const useRequestedData = (endpoint, initialState) => {
     const [data, setData] = useState(initialState);
   const [isLoading, setIsLoading] = useState(false);
 
