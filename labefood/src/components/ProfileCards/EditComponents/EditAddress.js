@@ -1,4 +1,4 @@
-import { Button, TextField } from "@mui/material";
+
 import { useForm } from "../../../hooks/useForm";
 import api from "../../../config/api";
 import { useProtectedPage } from "../../../hooks/useProtectedPage";
@@ -6,8 +6,8 @@ import { useEffect } from "react";
 import { useRequestData } from "../../../hooks/useRequestData";
 import { useNavigate } from "react-router-dom";
 import { goToProfile } from "../../../routes/coordinator";
-import { ButtonContainer, ContainerEdit, InputsContainer } from "../Styled";
-import {Header} from "../../header/Header";
+import { ButtonContainer, ContainerEdit, InputsContainer, Button, Input } from "../Styled";
+import {Header} from "../../header/header"
 import Back from "../../../assets/back.svg";
 
 const EditAddress = () => {
@@ -24,7 +24,7 @@ const EditAddress = () => {
   });
 
   useEffect(() => {
-    const [ address ] = data;
+    const {address } = data;
     setForm({
       street: address?.street,
       number: address?.number,
@@ -65,7 +65,7 @@ const EditAddress = () => {
       <img src={Back} alt="voltar" onClick={() => goToProfile(navigate)}></img>
       <form onSubmit={submit}>
         <InputsContainer>
-          <TextField
+          <Input
             name={"street"}
             value={form.street || ""}
             onChange={onChange}
@@ -75,7 +75,7 @@ const EditAddress = () => {
             label="Logradouro"
             required
           />
-          <TextField
+          <Input
             name={"number"}
             value={form.number || ""}
             onChange={onChange}
@@ -86,7 +86,7 @@ const EditAddress = () => {
             label="Número"
             required
           />
-          <TextField
+          <Input
             name={"complement"}
             value={form.complement || ""}
             onChange={onChange}
@@ -95,7 +95,7 @@ const EditAddress = () => {
             id="outlined"
             label="Complemento"
           />
-          <TextField
+          <Input
             name={"neighbourhood"}
             value={form.neighbourhood || ""}
             onChange={onChange}
@@ -105,7 +105,7 @@ const EditAddress = () => {
             label="Bairro"
             required
           />
-          <TextField
+          <Input
             name={"city"}
             value={form.city || ""}
             onChange={onChange}
@@ -115,7 +115,7 @@ const EditAddress = () => {
             label="Cidade"
             required
           />
-          <TextField
+          <Input
             name={"state"}
             value={form.state || ""}
             onChange={onChange}

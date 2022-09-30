@@ -149,3 +149,26 @@ export const ContainerEdit = styled.div`
   }
  
 `
+export const Input = styled.input`
+ width: 20.5rem;
+  height: 3.5rem;
+  margin: 0.5rem 0 0;
+  padding: 1.188rem 3rem 1.188rem 1rem;
+  border-radius: 2px;
+  border: solid 1px #b8b8b8;
+
+`
+export const Button = styled.div`
+  
+  width: 18.5rem;
+  height: 1.125rem;
+  font-family: Roboto;
+  font-size: 1rem;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: -0.39px;
+  text-align: center;
+  color: #000;;
+`

@@ -1,19 +1,19 @@
-import { Button, TextField } from "@mui/material";
+
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../../../hooks/useForm";
 import { useProtectedPage } from "../../../hooks/useProtectedPage";
 import { useRequestData } from "../../../hooks/useRequestData";
 import { goToProfile } from "../../../routes/coordinator";
-import {Header} from "../../header/Header";
-import { ButtonContainer, ContainerEdit, InputsContainer } from "../Styled";
+import {Header} from "../../header/header"
+import { ButtonContainer, ContainerEdit, InputsContainer, Button, Input } from "../Styled";
 import Back from "../../../assets/back.svg";
 import api from "../../../config/api";
 
 const EditProfile = () => {
   useProtectedPage();
   const navigate = useNavigate();
-  const [ data ] = useRequestData(`/profile`, {});
+  const { data } = useRequestData(`/profile`, {});
   const [ form, onChange, setForm ] = useForm({
     name: "",
     email: "",
@@ -57,7 +57,7 @@ const EditProfile = () => {
       <img src={Back} alt="voltar" onClick={() => goToProfile(navigate)}></img>
       <form onSubmit={submit}>
         <InputsContainer>
-          <TextField
+          <Input
             name={"name"}
             value={form.name || ""}
             onChange={onChange}
@@ -67,7 +67,7 @@ const EditProfile = () => {
             label="Nome"
             required
           />
-          <TextField
+          <Input
             name={"email"}
             value={form.email || ""}
             onChange={onChange}
@@ -78,7 +78,7 @@ const EditProfile = () => {
             label="E-mail"
             required
           />
-          <TextField
+          <Input
             name={"cpf"}
             value={form.cpf || ""}
             onChange={onChange}
