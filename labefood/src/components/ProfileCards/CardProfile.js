@@ -1,4 +1,4 @@
-import  {useRequestData}  from "../../hooks/useRequestData";
+import  {useRequestedData}  from "../../hooks/useRequestData";
 import { Container, Cpf, Email, Img1, Name } from "./Styled";
 import Spinner from "../Spinner/Spinner";
 import Edit from "../../assets/edit.svg";
@@ -7,7 +7,7 @@ import CardHistory from "./CardHistory";
 import { useNavigate } from "react-router-dom";
 
 const CardProfile = () => {
-  const { data, isLoading } = useRequestData(`/profile`);
+  const { data, isLoading } = useRequestedData(`/profile`);
   const navigate = useNavigate();
   const goToEditProfile = (navigate) => {
     navigate("/editProfile");

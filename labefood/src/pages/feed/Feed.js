@@ -9,7 +9,7 @@ import { useState } from "react";
 import { Container, Categories } from "./styled"
 import { Footer } from "../../components/footer/Footer";
 
-import {Header} from "../../components/header/header"
+import {Header} from "../../components/header/Header"
 
 
 

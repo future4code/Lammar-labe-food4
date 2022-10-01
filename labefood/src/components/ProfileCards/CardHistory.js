@@ -1,11 +1,11 @@
-import  {useRequestData}  from "../../hooks/useRequestData";
+import  {useRequestedData}  from "../../hooks/useRequestData";
 import { History, Line, P } from "./Styled";
 import Card from "@mui/material/Card";
 import Typography from "@mui/material/Typography";
 import CardContent from "@mui/material/CardContent";
 
 const CardHistory = () => {
-  const { data } = useRequestData(`/orders/history`);
+  const { data } = useRequestedData(`/orders/history`);
 
   const monthNames = [
     "Janeiro",

@@ -3,17 +3,17 @@ import { useForm } from "../../../hooks/useForm";
 import api from "../../../config/api";
 import { useProtectedPage } from "../../../hooks/useProtectedPage";
 import { useEffect } from "react";
-import { useRequestData } from "../../../hooks/useRequestData";
+import { useRequestedData } from "../../../hooks/useRequestData";
 import { useNavigate } from "react-router-dom";
 import { goToProfile } from "../../../routes/coordinator";
 import { ButtonContainer, ContainerEdit, InputsContainer, Button, Input } from "../Styled";
-import {Header} from "../../header/header"
+import {Header} from "../../header/Header"
 import Back from "../../../assets/back.svg";
 
 const EditAddress = () => {
   useProtectedPage();
   const navigate = useNavigate();
-  const {  data } = useRequestData(`/profile/address`, {});
+  const {  data } = useRequestedData(`/profile/address`, {});
   const [form, onChange, setForm] =useForm({
     street: "",
     number: "",

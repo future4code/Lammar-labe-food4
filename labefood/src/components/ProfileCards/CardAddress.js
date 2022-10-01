@@ -1,11 +1,11 @@
-import  {useRequestData}  from "../../hooks/useRequestData";
+import  {useRequestedData}  from "../../hooks/useRequestData";
 import { ContainerAddress, Endereco, Img2, TitleAddress } from "./Styled";
 import Edit from "../../assets/edit.svg";
 import { useNavigate } from "react-router-dom"
 
 
 const CardAddress = () => {
-  const { data, isLoading } = useRequestData(`/profile/address`);
+  const { data, isLoading } = useRequestedData(`/profile/address`);
   const navigate = useNavigate()
 
   const goToEditAddress = (navigate) => {

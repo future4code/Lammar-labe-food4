@@ -1,13 +1,15 @@
-import { useEffect, useState } from "react";
-import api from "../config/api"
+import { useEffect } from "react";
+import { useState } from "react";
+import api from "../config/api";
+
+
 export const useRequestedData = (endpoint, initialState) => {
-    const [data, setData] = useState(initialState);
+  const [data, setData] = useState(initialState);
   const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     getData();
        // eslint-disable-next-line
-
   }, [endpoint]);
 
   const getData = () => {
@@ -18,6 +20,7 @@ export const useRequestedData = (endpoint, initialState) => {
         setData(res.data);
       })
       .catch((err) => {
+        console.log(err.response.data.message);
         alert(err.response.data.message);
       })
       .finally(() => {
@@ -29,3 +32,4 @@ export const useRequestedData = (endpoint, initialState) => {
 
   return { data, isLoading };
 };
+

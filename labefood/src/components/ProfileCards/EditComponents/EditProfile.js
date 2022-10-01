@@ -3,9 +3,9 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { useForm } from "../../../hooks/useForm";
 import { useProtectedPage } from "../../../hooks/useProtectedPage";
-import { useRequestData } from "../../../hooks/useRequestData";
+import { useRequestedData } from "../../../hooks/useRequestData";
 import { goToProfile } from "../../../routes/coordinator";
-import {Header} from "../../header/header"
+import {Header} from "../../header/Header"
 import { ButtonContainer, ContainerEdit, InputsContainer, Button, Input } from "../Styled";
 import Back from "../../../assets/back.svg";
 import api from "../../../config/api";
@@ -13,7 +13,7 @@ import api from "../../../config/api";
 const EditProfile = () => {
   useProtectedPage();
   const navigate = useNavigate();
-  const { data } = useRequestData(`/profile`, {});
+  const { data } = useRequestedData(`/profile`, {});
   const [ form, onChange, setForm ] = useForm({
     name: "",
     email: "",

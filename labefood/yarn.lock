@@ -5714,10 +5714,10 @@
   "resolved" "https://registry.npmjs.org/fraction.js/-/fraction.js-4.2.0.tgz"
   "version" "4.2.0"
 
-"framer-motion@^7.4.0", "framer-motion@>=4.0.0":
-  "integrity" "sha512-tcvL5L1cASYjIeBG6mQHhzfndm7MdyHjOwqIdOzOetIVa1yUqeYMufAoljgqg69XFgsgZet+c4iuSuFF+Vgbjg=="
-  "resolved" "https://registry.npmjs.org/framer-motion/-/framer-motion-7.4.0.tgz"
-  "version" "7.4.0"
+"framer-motion@^7.5.1", "framer-motion@>=4.0.0":
+  "integrity" "sha512-shqLAFgYT7QMVomusesPurlq9pQGLO64PTbWdQPkMg2cHmxI0ISG9BajGY3krg56yhBMI7QP/3u54bs/To0mOA=="
+  "resolved" "https://registry.npmjs.org/framer-motion/-/framer-motion-7.5.1.tgz"
+  "version" "7.5.1"
   dependencies:
     "@motionone/dom" "10.13.1"
     "framesync" "6.1.2"

@@ -1,6 +1,6 @@
 import { Container, Order, IMG, OrderInfo, Btns, Icons } from "./Styled"
 import { useNavigate } from "react-router-dom";
-import {useRequestedData} from "../../hooks/useRequestedData"
+import {useRequestedData} from "../../hooks/useRequestData"
 import { goToFeed, goToRestaurants, goToProfile} from "../../routes/coordinator";
 import Avatar from '../../assets/Avatarsvg'
 import Shopping_Cart from '../../assets/Shopping_Cartsvg'

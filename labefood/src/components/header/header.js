@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom"
-import { Container } from "../styled"
+import {Container} from "./Styles"
 import { goToLoginPage } from "../../routes/coordinator"
 
 export const Header = ({ subTitle }) => {
