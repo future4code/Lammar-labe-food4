@@ -57,4 +57,6 @@ export const Categories = styled.div`
     text-align: center;
   }
   ${({idx}) => (`p:nth-child(${idx}){color: #5cb646}`)}
+
 `;
+
