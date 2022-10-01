@@ -14,7 +14,7 @@ const EditAddress = () => {
   useProtectedPage();
   const navigate = useNavigate();
   const {  data } = useRequestData(`/profile/address`, {});
-  const [form, onChange, setForm] =useForm({
+  const [ form, onChange, setForm ] = useForm({
     street: "",
     number: "",
     neighbourhood: "",
