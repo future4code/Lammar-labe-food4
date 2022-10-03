@@ -1,4 +1,3 @@
-
 import styled from "styled-components"
 
 export const Titulo = styled.div`
@@ -6,7 +5,6 @@ font-family: Oxygen;
 font-size: 1.6rem;
 margin-top: 10px;
 `
-
 
 export const DivFooter = styled.div`
 background: #fff;
@@ -119,7 +117,6 @@ h2{
 }
 `
 
-
 export const Card = styled.div`
     overflow:hidden;
     width: 50%;
@@ -166,7 +163,6 @@ export const Container = styled.div`
         padding-left: 5px;
     }
 `
-
 
 export const ButtonActive = styled.button`
     background-color: transparent;

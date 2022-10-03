@@ -10,7 +10,6 @@ import { useProtectedPage } from "../../hooks/useProtectedPage";
 
 
 
-
 export const Restaurants = () => {
     useProtectedPage()
     const [data, setData] = useState({ restaurant: {} })
@@ -50,11 +49,9 @@ export const Restaurants = () => {
         )
     }
 
-
     const lista = filtro && filtro.map((cate) => {
         return produtos(cate, data.restaurant.products)
     })
-
 
 
     const getRestaurantes = () => {
@@ -102,4 +99,3 @@ export const Restaurants = () => {
         </Body>
     )
 }
-
