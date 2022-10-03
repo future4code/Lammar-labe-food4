@@ -7,10 +7,14 @@ export const useForm = (initialState) => {
         const { value, name } = event.target
         setForm({...form, [name]: value})
     }
-
     const clearField = () => {
         setForm(initialState)
-    }
+    };
 
-  return [form, onChange, clearField, setForm];
+
+  return [ form, onChange, clearField, setForm ];
 };
+
+
+
+

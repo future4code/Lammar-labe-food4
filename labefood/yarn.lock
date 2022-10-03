@@ -2513,6 +2513,21 @@
     "@mui/utils" "^5.10.6"
     "prop-types" "^15.8.1"
 
+<<<<<<< HEAD
+"@mui/styled-engine@^5.10.7":
+  "integrity" "sha512-CCrtW+vvCKEm6pOE/QcutQ+ORC/iE6D1ghscN4l7LE2JXPvTXO/z0yu8Wxug1JEDlWm4r1Qa0PzJe1P9bjKzNA=="
+  "resolved" "https://registry.npmjs.org/@mui/styled-engine/-/styled-engine-5.10.7.tgz"
+  "version" "5.10.7"
+=======
+"@mui/styled-engine-sc@^5.10.6":
+  "integrity" "sha512-AQIa478w3UI8gmlht7orp96tEJbEN26FiEs9Aee6E+iVTnoyT3b6V/JapgKlITo6rn7tYTSX9iJYwnDTMhbzTg=="
+  "resolved" "https://registry.npmjs.org/@mui/styled-engine-sc/-/styled-engine-sc-5.10.6.tgz"
+  "version" "5.10.6"
+>>>>>>> master
+  dependencies:
+    "@babel/runtime" "^7.19.0"
+    "prop-types" "^15.8.1"
+
 "@mui/styled-engine@^5.10.7":
   "integrity" "sha512-CCrtW+vvCKEm6pOE/QcutQ+ORC/iE6D1ghscN4l7LE2JXPvTXO/z0yu8Wxug1JEDlWm4r1Qa0PzJe1P9bjKzNA=="
   "resolved" "https://registry.npmjs.org/@mui/styled-engine/-/styled-engine-5.10.7.tgz"
@@ -9597,10 +9612,10 @@
     "hey-listen" "^1.0.8"
     "tslib" "2.4.0"
 
-"styled-components@^5.3.5", "styled-components@>= 2":
-  "integrity" "sha512-ndETJ9RKaaL6q41B69WudeqLzOpY1A/ET/glXkNZ2T7dPjPqpPCXXQjDFYZWwNnE5co0wX+gTCqx9mfxTmSIPg=="
-  "resolved" "https://registry.npmjs.org/styled-components/-/styled-components-5.3.5.tgz"
-  "version" "5.3.5"
+"styled-components@^5.3.1", "styled-components@^5.3.6", "styled-components@>= 2":
+  "integrity" "sha512-hGTZquGAaTqhGWldX7hhfzjnIYBZ0IXQXkCYdvF1Sq3DsUaLx6+NTHC5Jj1ooM2F68sBiVz3lvhfwQs/S3l6qg=="
+  "resolved" "https://registry.npmjs.org/styled-components/-/styled-components-5.3.6.tgz"
+  "version" "5.3.6"
   dependencies:
     "@babel/helper-module-imports" "^7.0.0"
     "@babel/traverse" "^7.4.5"
