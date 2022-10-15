@@ -32,8 +32,7 @@ export const LoginPage = () => {
 
   const onSubmit = async (e) => {
     e.preventDefault()
-    loginPage(form, clearField, navigate, setIsLoading);
-
+    // loginPage(form, clearField, navigate, setIsLoading);
     console.log(form)
     setIsEmailValid(/[a-zA-Z0-0]+@[a-z]{3}[.a-z]?/.test(form.email));
     setIsPasswordValid(/.{6,}/.test(form.password));
@@ -72,13 +71,15 @@ export const LoginPage = () => {
             ) : undefined}
           </FormControl>
 
+          <FormControl isInvalid={!isPasswordValid}>
+          <FormLabel>Senha*</FormLabel>
           <InputGroup size="md">
             <Input
               name="password"
-              type="text"
               value={form.password}
               onChange={onChange}
-              required
+              pr='4.5rem'
+              type={showPassword ? 'text' : 'password'}
               placeholder="Mínimo 6 caracteres"
             />
             <InputRightElement width="4.5rem">
@@ -87,9 +88,15 @@ export const LoginPage = () => {
               </IconButton>
             </InputRightElement>
           </InputGroup>
+          {!isPasswordValid ? (
+            <FormErrorMessage as="p">
+              Mínimo 6 caracteres
+            </FormErrorMessage>
+          ) :undefined}
           <Button type={"submit"} variant="form-main"
             >
             Entrar</Button>
+            </FormControl>
           <Button
             onClick={() => goToSignup(navigate)}
             type="button"
